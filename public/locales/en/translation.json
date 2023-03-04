@@ -2,5 +2,8 @@
   "language": "English",
   "Test": "Test",
   "About Page": "About Page",
-  "Main Page": "Main Page"
+  "Main Page": "Main Page",
+  "about": "about",
+  "main": "main",
+  "toggle": "toggle"
 }

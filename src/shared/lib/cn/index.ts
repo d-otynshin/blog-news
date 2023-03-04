@@ -12,5 +12,6 @@ export const cn = (
       .filter(([_, value]) => Boolean(value))
       .map(([name]) => name)
   ]
-    .join(' ');
+    .join(' ')
+    .trim();
 }

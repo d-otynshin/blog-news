@@ -3,6 +3,7 @@ import { cn } from 'shared/lib/cn';
 import styles from './Sidebar.module.scss';
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
 import { Button } from 'shared/ui/Button/Button';
+import { useTranslation } from 'react-i18next'
 
 interface ISidebar {
   className?: string
@@ -10,6 +11,7 @@ interface ISidebar {
 
 export const Sidebar: FC<ISidebar> = ({ className }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const { t } = useTranslation();
 
   const onToggle = (): void => {
     setIsCollapsed((isCollapsed) => !isCollapsed);
@@ -24,7 +26,7 @@ export const Sidebar: FC<ISidebar> = ({ className }) => {
       )}
     >
       <LangSwitcher />
-      <Button onClick={onToggle}>toggle</Button>
+      <Button onClick={onToggle}>{t('toggle')}</Button>
     </div>
   );
 };
