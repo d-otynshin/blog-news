@@ -8,6 +8,7 @@
     "allowJs": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
@@ -16,7 +17,12 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
     }
-  }
+  },
+  "include": [
+    "src/**/*",
+    "./config/**/*",
+  ],
+  "types": ["node", "jest", "@testing-library/jest-dom"]
 }

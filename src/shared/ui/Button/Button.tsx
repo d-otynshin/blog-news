@@ -1,9 +1,10 @@
-import React, { type ButtonHTMLAttributes, type FC } from 'react';
+import React, { ButtonHTMLAttributes, FC } from 'react';
 import { cn } from 'shared/lib/cn';
 import styles from './Button.module.scss';
 
 export enum ThemeButton {
   CLEAR = 'clear',
+  OUTLINE = 'outline'
 }
 
 interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {

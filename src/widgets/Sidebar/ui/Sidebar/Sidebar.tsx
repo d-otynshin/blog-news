@@ -19,6 +19,7 @@ export const Sidebar: FC<ISidebar> = ({ className }) => {
 
   return (
     <div
+      data-testid="sidebar"
       className={cn(
         styles.Sidebar,
         { [styles.collapsed]: isCollapsed },
@@ -26,7 +27,9 @@ export const Sidebar: FC<ISidebar> = ({ className }) => {
       )}
     >
       <LangSwitcher />
-      <Button onClick={onToggle}>{t('toggle')}</Button>
+      <Button data-testid="sidebar-toggle" onClick={onToggle}>
+        {t('toggle')}
+      </Button>
     </div>
   );
 };
