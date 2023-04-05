@@ -23,6 +23,7 @@
   "include": [
     "src/**/*",
     "./config/**/*",
+    "webpack.config.ts"
   ],
   "types": ["node", "jest", "@testing-library/jest-dom"]
 }
