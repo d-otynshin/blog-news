@@ -1,23 +1,20 @@
-import React, { FC } from 'react';
-import { cn } from 'shared/lib/cn';
-import styles from './Navbar.module.scss';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-import { useTranslation } from 'react-i18next'
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { useTranslation } from 'react-i18next';
+import cls from './Navbar.module.scss';
 
-interface INavbar {
-  className?: string
+interface NavbarProps {
+    className?: string;
 }
 
-export const Navbar: FC<INavbar> = ({ className }) => {
-  const { t } = useTranslation();
+export const Navbar = ({ className }: NavbarProps) => {
+    const { t } = useTranslation();
 
-  return (
-    <div className={cn(styles.Navbar, {}, [className])}>
-      <ThemeSwitcher />
-
-      <AppLink to={'/about'}>{t('about')}</AppLink>
-      <AppLink to={'/'}>{t('main')}</AppLink>
-    </div>
-  );
+    return (
+        <div className={classNames(cls.Navbar, {}, [className])}>
+            <div className={cls.links}>
+                /
+            </div>
+        </div>
+    );
 };

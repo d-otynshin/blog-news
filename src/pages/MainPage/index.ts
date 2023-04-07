@@ -1,1 +1,5 @@
-export { MainPageLazy as MainPage } from './ui/MainPage.async';
+import { MainPageAsync } from './ui/MainPage.async';
+
+export {
+    MainPageAsync as MainPage,
+};
